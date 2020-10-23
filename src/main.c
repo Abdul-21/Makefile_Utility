@@ -7,7 +7,6 @@
 #include "graph.h"
 #include "dfs_stack.h"
 
-//Validate the input arguments, bullet proof the program
 int main(int argc, char *argv[])
 {
 
