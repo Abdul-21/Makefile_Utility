@@ -7,6 +7,8 @@
 #include "graph.h"
 #include "dfs_stack.h"
 
+int process_file(char *fname);
+
 int main(int argc, char *argv[])
 {
 

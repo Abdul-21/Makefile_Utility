@@ -10,8 +10,8 @@ all: main
 ${OBJ}: ${SRC} ${DEP}
 	gcc $(CFLAGS) $(DBFLAG) -c $< -o $@
 
-main:
-	gcc $(SRC) $ -o makeutil
+main: ${OBJ}
+	gcc $(SRC) $(CFLAGS) $(DBFLAG) -o makeutil
 
 clean:
 	rm -f makeutil *.o
