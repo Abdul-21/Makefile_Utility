@@ -12,7 +12,7 @@ int process_file(char *fname);
 int main(int argc, char *argv[])
 {
 
-	//$./mymake Makefile This fork and exec the makefile form start to finish
+	//$./makeutil Makefile This fork and exec the makefile form start to finish
 	//Similarly account for -r flag
 	if (argc == 2 && strncmp(argv[1], "-p", 2)) {
 
@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
 
 	}
 	if (argc == 3) {
-//$./mymake -r Makefile This prints the recipes in order on the screen
+//$./makeutil -r Makefile This prints the recipes in order on the screen
 	if(strcmp(argv[1],"-r")==0){
 		if (process_file(argv[2])) { //Error checking
 			fprintf(stderr, "Exiting, %s was not open\n",argv[2]);
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 
 	}
 	}else if (!strncmp(argv[1], "-p", 2)) {
-			//$./mymake -p Makefile print the recipe, and depends in order
+			//$./makeutil -p Makefile print the recipe, and depends in order
 			if (process_file(argv[2])) {//Error check for the file
 				fprintf(stderr, "Exiting %s\n",argv[2]);
 				exit(0);
